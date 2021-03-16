@@ -1,0 +1,108 @@
+<html>
+<head>
+	<title> Turistička agencija </title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleSlider.css">
+	<link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body><div class="sve">
+	<h1>
+		 Turistička agencija
+	</h1>
+
+	<ul class="navigacijaDesktop">
+		<li> <a href="index.html"> POCETNA </a></li>
+		<li> <a href="ponude.html"> PONUDE </a></li>
+		<li> <a href="galerija.html"> GALERIJA </a></li>
+		<li> <a href="forma.html" class="active"> REZERVACIJA </a></li>
+		<li> <a href="petastrana.html"> INFO </a></li>
+	</ul>
+	<div class="dropdownNav">
+		<button onclick="myFunction()" class="dropbtn"> &#x2630</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html">REZERVACIJA</a>
+			<a href="ponude.html">PONUDE</a>
+			<a href="galerija.html">GALERIJA</a>
+			<a href="petastrana.html">INFO</a>
+		</div>
+	</div> 
+	
+	<form name="formaZaSlanje" action="" method="post">
+		<table class="formaTabela">
+			<tr>
+				<td> Vase ime:</td>
+				<td> <input required placeholder="Primer"type="text" id="korisnikId"></td>
+			</tr>
+			<tr>
+				<td> Vase prezime: </td>
+				<td> <input required placeholder="Primerovic"type="text" id="korisnikPrezime"> </td>
+			</td>
+			<tr>
+				<td> Vasa email adresa:</td>
+				<td> <input required placeholder="primer@example.com"type="text" id="korisnikMail"></td>
+			</tr>
+			<tr>
+				<td> Zeljena destinacija:</td>
+				<td> <select required id="korisnikOpcija">
+					<option> Pariz </option>
+					<option> Beč </option>
+					<option> Madrid </option>
+					<option> Atina </option>
+					<option> Rim </option>
+					<option> Prag </option>
+					<option> Moskva </option>
+					<option> Berlin </option>
+					</td>
+			</tr>
+			<tr>
+			<td> Izaberite datum polaska: </td>
+				<td>
+				<input required type="date">
+				</td>
+			</tr>
+			<tr>
+			<td> Izaberite datum povratka: </td>
+				<td>
+				<input required type="date">
+				</td>
+			</tr>
+			<tr>
+				<td>Da li koristite nase usluge prevoza?</td>
+				<td> <input required name="korisnikPrevoz" type="radio" id="korisnikPrevoz"> Da <input name="korisnikPrevoz" type="radio" id="korisnikPrevoz"> Ne</td>
+			</tr>
+			<tr>
+				<td> Da li zelite osiguranje? </td>
+				<td> <input required name="korisnikOsiguranje" type="radio" id="korisnikOsiguranje"> Da <input name="korisnikOsiguranje" type="radio" id="korisnikOsiguranje"> Ne</td>
+			</tr>
+			<tr>
+				<td  colspan="2"><button type="submit" id="dugme" > Posalji zahtev!</td>
+			</tr>
+		
+		</table>
+	</form>
+	</div>
+	<script> 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+	  }
+	} 
+</script>
+</body>
+</html>
