@@ -1,0 +1,173 @@
+<html>
+<head>
+	<title> Turistička agencija </title>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleSlider.css">
+	<link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body><div class="sve">
+	<h1>
+		 Turistička agencija
+	</h1>
+	<ul class="navigacijaDesktop">
+		<li> <a href="index.html" class="active"> POCETNA </a></li>
+		<li> <a href="ponude.html"> PONUDE </a></li>
+		<li> <a href="galerija.html"> GALERIJA </a></li>
+		<li> <a href="forma.html"> REZERVACIJA </a></li>
+		<li> <a href="petastrana.html"> INFO </a></li>
+	</ul>
+	<div class="dropdownNav">
+		<button onclick="myFunction()" class="dropbtn"> &#x2630</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="ponude.html">PONUDE</a>
+			<a href="galerija.html">GALERIJA</a>
+			<a href="forma.html">REZERVACIJA</a>
+			<a href="petastrana.html">INFO</a>
+		</div>
+	</div> 
+	<h2 id="dobrodosli"> Dobrodosli na sajt Turistička agencija
+	</h2>
+	<p id="randomTekst">
+	Mesto gde mozete naci najbolja odredista, najbolje cene, najbolje vodice, najbolje apartmane, najbolje vozace, najbrzi i najbolji prevoz, najluksuznije lokacije. Vase je samo da se prijavite i platite, a mi brinemo o ostalom. 
+	<br>
+	<div class="pozadina">
+	<div class="slideshow-container"> 
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 3</div>
+			<img src="slike/sliderSlika1.jpg" style="width:100%">
+			<div class="text" id="parizText">Pariz</div>
+		</div>
+		 <div class="mySlides fade">
+			<div class="numbertext">2 / 3</div>
+			<img src="slike/sliderSlika2.jpg" style="width:100%">
+			<div class="text">Moskva </div>
+		 </div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 3</div>
+			<img src="slike/sliderSlika3.jpg" style="width:100%">
+			<div class="text">Atina</div>
+		</div>
+
+	  <!-- Next and previous buttons -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<br>
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span>
+	  <span class="dot" onclick="currentSlide(2)"></span>
+	  <span class="dot" onclick="currentSlide(3)"></span>
+	</div>
+	</div>
+	<h1>Ispod mozete pogledati nase:</h1>
+	</p>
+	<div class="flex-container">
+	<a href="ponude.html#divLetnjePonude">
+	<div class="glavno">
+		<img src="slike/leto.jpg">
+		<h3> LETNJE DESTINACIJE
+		</h3>
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+	</div>
+	</a>
+	<a href="ponude.html#divJesenjePonude">
+	<div  class="glavno">
+		<img src="slike/jesen.jpg">
+		<h3> JESENJE DESTINACIJE
+		</h3>
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+	</div>
+	</a>
+	</div>
+	<div class="flex-container">
+	<a href="ponude.html#divZimskePonude">
+	<div  class="glavno">
+		<img src="slike/zima.jpg">
+		<h3> ZIMSKE DESTINACIJE
+		</h3>
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+	</div>
+	</a>
+	<a href="ponude.html#divProlecnePonude">
+	<div  class="glavno">
+		<img src="slike/prolece.jpg">
+		<h3> PROLECNE DESTINACIJE
+		</h3>
+		<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+		</p>
+	</div>
+	</a>
+	</div>
+
+<script>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+/*
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} */
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Menja sliku na svakih 5 sekundi
+} 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+	
+	</div>
+</body>
+
+</html>

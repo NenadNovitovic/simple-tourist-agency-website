@@ -1,0 +1,161 @@
+body{
+	margin: auto;
+	width:85%;
+	background-image: url("slike/pozadina22.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.sve {
+	background-color:  #b4e5fd;
+	border-radius: 15px;
+}
+h1{
+	font-size:3em;
+	color: #0059b3;
+}
+h2{
+	font-size:2.5em;
+	color: blue;
+}
+.ponudeDiv h2{
+	color: #0059b3;
+}
+.ponudeIzgled h3{
+	font-size:1.8em;
+	color: #0059b3;
+}
+#randomTekst{
+	color: #0059b3;
+	font-size: 1.5em;
+}
+#dobrodosli{
+	color: #0059b3;
+}
+a{
+	color:rgb(45, 73, 164);
+}
+
+.glavno{
+	opacity: 0.95;
+}
+.glavno img{
+	width: 99%;
+	padding-top: 20px;	
+}
+.glavno p, h3{
+	background-color:  #b4e5fd;
+	color: #0059b3;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+.glavno:hover{
+	opacity: 1;
+}
+.ponudeIzgled{
+	background-color: 	#b4e5fd;
+}
+.ponudeIzgled table {
+	background-color:#69cbfc;
+	height: 300px;
+}
+.ponudeIzgled th, td {
+	text-align: center;
+	width: 20%;
+}
+.ponudeIzgled a {
+	color: black;
+	text-decoration: none;
+}
+.ponudeIzgled a:hover{
+	color: rgb(45, 103, 151);
+}
+.neparniRed{
+	background-color: #83d3fc;
+}
+div.galerijaIzgled  {
+    border: 1px solid #ccc;
+}
+.galerijaFlex img {
+	width: 45%;
+	padding: 10px;
+}
+.slikeGalerija{
+	transition: width 0.5s;
+}
+.slikeGalerija:hover{
+	width: 47%;
+}
+
+.proleceGradovi{
+	background-color:#b4e5fd;
+	color: #0059b3;
+	font-size:2em;
+	text-align: center;
+}
+
+.formaTabela  {
+	height:400px;
+	background-color:#b4e5fd;
+	margin: auto;
+	color: #0059b3;
+}
+.petaStranaDiv{
+	background-color:#b4e5fd;
+	height: 600px;	
+}
+#kontaktiH {
+	font-size: 1.5em;
+	background-color:#b4e5fd;
+	color: #0059b3;
+}
+.petaStranaDiv p {
+	color: #0059b3;
+	background-color:#b4e5fd;
+}
+#paragrafPeta1{
+	font-size: 1.2em;
+}
+
+.flex-container{
+	display:flex;
+}
+.galerijaFlex{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+ @media screen and (max-width:800px){
+	 .glavno{
+	opacity: 1;
+	}
+	.galerijaFlex img{
+		width:100%;
+	}
+	.flex-container {
+		width:100%;
+		flex-wrap:wrap;
+	}
+	body{
+        background-image: url('slike/mobilnapozadina.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+	}
+	.slikeGalerija:hover{
+		width: 100%;
+	}
+	
+	
+}
+#dugme {
+	background-color:#0073e6;
+	color: white;
+	width: 100px;
+	height: 50px;
+}
+#dugme:active{
+	background-color:#3399ff;
+}

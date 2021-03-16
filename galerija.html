@@ -1,0 +1,118 @@
+<html>
+<head>
+	<title> Turistička agencija </title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleSlider.css">
+	<link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body>
+	<div class="sve">
+	<h1>
+		 Turistička agencija
+	</h1>
+	<ul class="navigacijaDesktop">
+		<li> <a href="index.html"> POCETNA </a></li>
+		<li> <a href="ponude.html"> PONUDE </a></li>
+		<li> <a href="galerija.html" class="active"> GALERIJA </a></li>
+		<li> <a href="forma.html"> REZERVACIJA </a></li>
+		<li> <a href="petastrana.html"> INFO </a></li>
+	</ul>
+	<div class="dropdownNav">
+		<button onclick="myFunction()" class="dropbtn"> &#x2630</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html"> POCETNA </a>
+			<a href="ponude.html">PONUDE</a>
+			<a href="forma.html">REZERVACIJA</a>
+			<a href="petastrana.html">INFO</a>
+		</div>
+	</div> 
+	<h3 class="proleceGradovi" id="galerijaGrad1"> Pariz: </h3>
+	<div class="galerijaFlex">
+			<img class="slikeGalerija" src="slike/pariz.jpg">
+			<img class="slikeGalerija" src="slike/pariz2.jpg">	
+			<img class="slikeGalerija" src="slike/pariz3.jpg">
+			<img class="slikeGalerija" src="slike/pariz4.jpg">
+	</div>
+	<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad2"> Beč: </h3>
+	<div class="galerijaFlex">
+			<img class="slikeGalerija" src="slike/bec.jpg">
+			<img class="slikeGalerija" src="slike/bec2.jpg">	
+			<img class="slikeGalerija" src="slike/bec3.jpg">
+			<img class="slikeGalerija" src="slike/bec4.jpg">
+	</div>
+	<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad3"> Madrid: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/madrid.jpg">
+		<img class="slikeGalerija" src="slike/madrid2.jpg">	
+		<img class="slikeGalerija" src="slike/madrid3.jpg">
+		<img class="slikeGalerija" src="slike/madrid4.jpg">
+	</div>
+	<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad4"> Atina: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/atina.jpg">
+		<img class="slikeGalerija" src="slike/atina2.jpg">	
+		<img class="slikeGalerija" src="slike/atina3.jpg">
+		<img class="slikeGalerija" src="slike/atina4.jpg">
+	</div>
+		<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad5"> Rim: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/rim.jpg">
+		<img class="slikeGalerija" src="slike/rim2.jpg">	
+		<img class="slikeGalerija" src="slike/rim3.jpg">
+		<img class="slikeGalerija" src="slike/rim4.jpg">
+	</div>
+		<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad6"> Prag: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/prag1.jpg">
+		<img class="slikeGalerija" src="slike/prag2.jpg">	
+		<img class="slikeGalerija" src="slike/prag3.jpg">
+		<img class="slikeGalerija" src="slike/prag4.jpg">
+	</div>
+		<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad7"> Moskva: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/moskva.jpg">
+		<img class="slikeGalerija" src="slike/moskva5.jpg">	
+		<img class="slikeGalerija" src="slike/moskva3.jpg">
+		<img class="slikeGalerija" src="slike/moskva4.jpg">
+	</div>
+		<div style="clear:both;"></div>
+		<h3 class="proleceGradovi" id="galerijaGrad8"> Berlin: </h3>
+	<div class="galerijaFlex">
+		<img class="slikeGalerija" src="slike/berlin.jpg">
+		<img class="slikeGalerija" src="slike/berlin2.jpg">	
+		<img class="slikeGalerija" src="slike/berlin3.jpg">
+		<img class="slikeGalerija" src="slike/berlin4.jpg">
+	</div>
+
+	</div>
+	<script> 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+	  }
+	} 
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title> Turistička agencija </title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="styleSlider.css">
+	<link rel="stylesheet" href="nav.css">
+
+</head>
+
+<body><div class="sve">
+	<h1>
+		 Turistička agencija
+	</h1>
+
+	<ul class="navigacijaDesktop">
+		<li> <a href="index.html"> POCETNA </a></li>
+		<li> <a href="ponude.html"> PONUDE </a></li>
+		<li> <a href="galerija.html"> GALERIJA </a></li>
+		<li> <a href="forma.html"> REZERVACIJA </a></li>
+		<li> <a href="petastrana.html" class="active"> INFO </a></li>
+	</ul>
+	<div class="dropdownNav">
+		<button onclick="myFunction()" class="dropbtn"> &#x2630</button>
+		<div id="myDropdown" class="dropdown-content">
+			<a href="index.html">POCETNA</a>
+			<a href="ponude.html">PONUDE</a>
+			<a href="galerija.html">GALERIJA</a>
+			<a href="forma.html">REZERVACIJA</a>
+		</div>
+	</div> 
+	<div class="petaStranaDiv">
+		<h3 id="kontaktiH">O nama:</h3>
+		<p id="paragrafPeta1"> Attero dominatus, denique interimo. <em>Gloria fortis miles, adversor et admorsus.</em> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<br>
+		<h3 id="kontaktiH"> Kontakt: <h3>
+		<p id="paragrafPeta2"> 
+			Telefon: +381 61/33-22-113 <br>
+			Telefon: +381 11/33-22-113 <br>
+			Email:   turistickaagencija@gmail.com <br>
+			Lokacija: Nepostojeca 404, Beograd
+		</p>
+	</div>
+	</div>
+	<script> 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+	// Close the dropdown menu if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		var i;
+		for (i = 0; i < dropdowns.length; i++) {
+		  var openDropdown = dropdowns[i];
+		  if (openDropdown.classList.contains('show')) {
+			openDropdown.classList.remove('show');
+		  }
+		}
+	  }
+	} 
+</script>
+</body>
+</html>
