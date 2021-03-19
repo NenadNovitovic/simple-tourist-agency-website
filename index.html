@@ -60,9 +60,9 @@
 	<br>
 	<!-- The dots/circles -->
 	<div style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span>
-	  <span class="dot" onclick="currentSlide(2)"></span>
-	  <span class="dot" onclick="currentSlide(3)"></span>
+	  <span class="dot" onclick="showSlide(1)"></span>
+	  <span class="dot" onclick="showSlide(2)"></span>
+	  <span class="dot" onclick="showSlide(3)"></span>
 	</div>
 	</div>
 	<h1>Ispod mozete pogledati nase:</h1>
@@ -109,52 +109,53 @@
 	</div>
 
 <script>
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-/*
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} */
-var slideIndex = 0;
+var sliderTimeout;
+var slideIndex = 1;
 showSlides();
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
+    console.log(slideIndex);
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 5000); // Menja sliku na svakih 5 sekundi
+    clearTimeout(sliderTimeout);
+    sliderTimeout = setTimeout(automaticSlide, 5000); // Menja sliku na svakih 5 sekundi
 } 
-function myFunction() {
+function automaticSlide(){
+	var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+	slideIndex++;
+    if (slideIndex > slides.length ) {slideIndex = 1;}
+    console.log(slideIndex);
+    slides[slideIndex-1].style.display = "block";
+    clearTimeout(sliderTimeout);
+    sliderTimeout = setTimeout(automaticSlide, 5000); // Menja sliku na svakih 5 sekundi
+}
+function plusSlides(n) { 
+  var slidesLength = document.getElementsByClassName("mySlides").length;
+  slideIndex+=n;
+  if(slidesLength<slideIndex){ slideIndex=1;}
+  if(slideIndex<=0) {slideIndex = 3;}
+  showSlide(slideIndex);
+}
+
+// Thumbnail image controls
+function showSlide(n) {
+  slideIndex = n;
+  showSlides();
+}
+
+function dropDownShow() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
